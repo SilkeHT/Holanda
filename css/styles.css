@@ -627,3 +627,121 @@ h1.page-title { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 1; max-wid
 .site-footer .help-list li { padding: 0; }
 .btn-footer { background: var(--papel); color: var(--noche); border-color: var(--papel); }
 .btn-footer:hover { background: var(--blanco); }
+
+/* =====================================================================
+   Restyle (Nov 2026): editorial, playful layer in the client's palette.
+   Serif display (Instrument Serif), labels in brackets, graph paper,
+   stripes, perforated card edges, dashed boxes and one hand-drawn doodle.
+   ===================================================================== */
+:root {
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-hand: "Caveat", "Segoe Print", cursive;
+  --grid-line: rgba(102, 155, 188, .18);
+  font-synthesis: none; /* no fake bold on the single-weight serif */
+}
+
+/* Serif headlines in sentence case */
+h1, h2, h3, .brand, .footer-brand, .page-title { text-transform: none; font-weight: 400; letter-spacing: -.01em; }
+h1 { font-size: clamp(3rem, 7vw, 6rem); line-height: .98; max-width: 16ch; }
+h2 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.02; }
+h1.page-title { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 1.02; }
+h3 { font-size: 1.875rem; line-height: 1.1; }
+.brand { font-size: clamp(1.6rem, 6vw, 2.1rem); letter-spacing: 0; }
+.footer-brand { font-size: clamp(3rem, 7vw, 5rem); line-height: .95; }
+
+/* Small uppercase labels, in brackets */
+.menu-main a, .menu-extra a {
+  text-transform: uppercase; letter-spacing: .08em; font-size: .8125rem; font-weight: 600;
+}
+@media (min-width: 1101px) {
+  .menu-main a::before, .menu-extra a::before { content: "("; }
+  .menu-main a::after, .menu-extra a::after { content: ")"; }
+}
+.kicker {
+  margin: 0; text-transform: uppercase; letter-spacing: .1em; font-size: .8125rem; font-weight: 700; color: var(--text-soft);
+}
+.kicker::before { content: "("; } .kicker::after { content: ")"; }
+
+/* Buttons: compact, uppercase */
+.btn { text-transform: uppercase; letter-spacing: .06em; font-size: .875rem; min-height: 46px; padding: 0 24px; }
+
+/* Page frame, like a printed poster */
+body::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 40;
+  border: 8px solid var(--noche);
+}
+@media (max-width: 600px) { body::after { border-width: 5px; } }
+
+/* Graph paper on the home hero and the light paper sections */
+.hero, .band-paper {
+  background-color: var(--papel);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Hero: label, handwritten note and doodle arrow */
+.hero-text { position: relative; }
+.hero-note {
+  position: absolute; right: 4%; bottom: -10px; display: flex; align-items: flex-end; gap: 6px;
+  font-family: var(--font-hand); font-size: 1.75rem; line-height: 1; color: var(--ladrillo); transform: rotate(-4deg);
+}
+.hero-note svg { width: 120px; height: auto; overflow: visible; }
+@media (max-width: 860px) { .hero-note { position: static; margin-top: 4px; transform: rotate(-3deg); } .hero-note svg { width: 90px; } }
+
+/* Ticker strip */
+.ticker { background: var(--noche); color: var(--papel); overflow: hidden; border-block: 3px solid var(--noche); }
+.ticker-row { display: flex; gap: 22px; white-space: nowrap; padding: 12px 0; width: max-content; }
+.ticker-row span { text-transform: uppercase; letter-spacing: .12em; font-size: .8125rem; font-weight: 600; }
+.ticker-row span.star { color: var(--ladrillo); letter-spacing: 0; font-size: 1rem; line-height: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .ticker-row { animation: ticker 60s linear infinite; }
+  @keyframes ticker { to { transform: translateX(-50%); } }
+}
+
+/* Home index as a notebook card with a perforated top edge */
+#guia-completa .page-index {
+  position: relative; margin-top: 40px; background: var(--blanco); color: var(--noche);
+  border-radius: 6px; padding: 54px clamp(20px, 4vw, 44px) 32px;
+}
+#guia-completa .page-index::before {
+  content: ""; position: absolute; left: 22px; right: 22px; top: -12px; height: 24px;
+  background: radial-gradient(circle, var(--ladrillo) 11px, transparent 12px) 0 0 / 40px 24px repeat-x;
+}
+#guia-completa .index-group h3 {
+  font-family: var(--font-body); text-transform: uppercase; letter-spacing: .1em; font-size: .8125rem; font-weight: 700;
+  color: var(--ladrillo); border-bottom: 2px solid var(--noche);
+}
+#guia-completa .index-group h3::before { content: "("; } #guia-completa .index-group h3::after { content: ")"; }
+#guia-completa .index-card { border-bottom: 1px dashed rgba(0, 48, 73, .35); }
+#guia-completa .index-card h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.75rem; }
+#guia-completa .index-card p { color: var(--text-soft); }
+#guia-completa .index-card:hover h4, #guia-completa .index-card:focus-visible h4 { color: var(--ladrillo); }
+
+/* Dashed boxes instead of solid ones */
+.warning, .fine-box { border-style: dashed; box-shadow: none; border-width: 3px; }
+.decision-q { font-family: var(--font-display); font-weight: 400; }
+
+/* Stripes behind the postcard */
+#sobre-mi {
+  background: repeating-linear-gradient(90deg, var(--papel) 0 34px, var(--acero-claro) 34px 68px);
+}
+.postcard { box-shadow: 10px 10px 0 var(--noche); }
+.postcard-message .signature { font-family: var(--font-hand); font-size: 3.25rem; font-weight: 600; }
+
+/* Serif numbers */
+.fact-num, .train-num, .result-total, .budget-mini strong, .tl-when, .letter, .step::before, .mini-steps li::before,
+.letters a, .help-list strong, .phrases dt, .term dt, .index-card h3, .bike-option h3, .city h3 {
+  font-family: var(--font-display); font-weight: 400;
+}
+.step::before { -webkit-text-stroke: 0; font-size: 2.75rem; }
+.tl-when { font-size: 1.625rem; font-style: italic; }
+.sign-text { font-family: var(--font-body); font-weight: 700; font-size: 17px; letter-spacing: .05em; }
+@media (min-width: 1101px) {
+  .menu ul.menu-main { gap: 2px 14px; }
+  .menu-main a, .menu-extra a { font-size: .75rem; letter-spacing: .05em; }
+  .menu-extra { gap: 14px; }
+}
+#guia-completa .page-index::before { background-position: center top; }
+.help-list strong { font-size: 1.75rem; }
