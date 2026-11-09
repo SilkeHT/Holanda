@@ -324,3 +324,47 @@ a:hover { text-decoration-color: var(--ladrillo); }
 .site-footer ul a { display: inline-block; padding: 6px 0; }
 .site-footer :focus-visible { outline-color: var(--acero-claro); }
 .disclaimer { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid rgba(253, 240, 213, .25); font-size: .875rem; opacity: .85; }
+
+/* ---------- "Leer más" panels: each section opens to a deeper read ---------- */
+.more { margin-top: clamp(32px, 4vw, 48px); border-top: 3px solid currentColor; }
+.more > summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 12px;
+  min-height: 48px; margin-top: 18px; padding: 0 22px 0 16px; border-radius: 999px;
+  border: 3px solid currentColor; font-weight: 700; transition: background-color .15s ease;
+}
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary::before {
+  content: ""; width: 18px; height: 18px; flex: none;
+  background:
+    linear-gradient(currentColor, currentColor) center / 100% 3px no-repeat,
+    linear-gradient(currentColor, currentColor) center / 3px 100% no-repeat;
+  transition: transform .2s ease;
+}
+.more[open] > summary::before { transform: rotate(45deg); }
+.more > summary:hover { background: var(--blanco); }
+.band-dark .more > summary:hover { background: var(--noche-2); }
+.band-paper .more > summary:hover { background: var(--papel); }
+
+.more-body { padding-top: 28px; max-width: 1080px; }
+.more-body > p, .more-body > ul { max-width: 70ch; }
+.more-body ul { padding-left: 20px; margin: 0 0 1em; display: grid; gap: 8px; }
+.more-body li::marker { color: var(--acero); }
+.more-body h4 { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; line-height: 1.1; margin-bottom: 10px; }
+.more-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px 40px; margin-top: 8px; }
+.more-grid > div { border-top: 2px solid var(--acero); padding-top: 14px; }
+.more-grid p, .more-grid ul { font-size: .96875rem; }
+.small-print { font-size: .9375rem; opacity: .9; }
+@media (prefers-reduced-motion: no-preference) {
+  .more[open] .more-body { animation: open-more .25s ease-out; }
+  @keyframes open-more { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+}
+
+/* Tables (wages, DUO hours) */
+.table-wrap { overflow-x: auto; margin: 8px 0 18px; }
+table { border-collapse: collapse; width: 100%; min-width: 440px; max-width: 760px; font-size: 1rem; }
+caption { text-align: left; font-weight: 600; padding-bottom: 10px; }
+th, td { text-align: left; padding: 10px 14px 10px 0; border-bottom: 1px solid rgba(0, 48, 73, .25); }
+thead th { border-bottom: 3px solid currentColor; font-size: .9375rem; }
+tbody th { font-weight: 700; }
+td:last-child, th:last-child { font-variant-numeric: tabular-nums; }
+.band-dark th, .band-dark td { border-bottom-color: rgba(253, 240, 213, .25); }
