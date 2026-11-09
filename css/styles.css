@@ -1,4 +1,4 @@
-/* Rumbo Holanda — tokens taken from the client's palette:
+/* Holanda, paso a paso — tokens taken from the client's palette:
    Molten Lava #780000, Brick Red #C1121F, Steel Blue #669BBC,
    Papaya Whip #FDF0D5, Deep Space Blue #003049.
    Red is an accent only (warnings, railing posts, one house). */
@@ -72,8 +72,8 @@ a:hover { text-decoration-color: var(--ladrillo); }
 .site-header { border-bottom: 3px solid var(--noche); background: var(--papel); }
 .header-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
 .brand {
-  font-family: var(--font-display); font-weight: 900; font-size: 1.9rem; text-transform: uppercase;
-  text-decoration: none; letter-spacing: .01em;
+  font-family: var(--font-display); font-weight: 900; font-size: clamp(1.4rem, 6vw, 1.9rem); text-transform: uppercase;
+  text-decoration: none; letter-spacing: .01em; white-space: nowrap;
 }
 .menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 20px; }
 .menu a {

@@ -1,6 +1,6 @@
 # Holanda
 
-Web universidad holanda: **Rumbo Holanda**, una guía en español para estudiantes que van a estudiar a una universidad de los Países Bajos.
+Web universidad holanda: **Holanda, paso a paso**, una guía en español para estudiantes que van a estudiar a una universidad de los Países Bajos.
 
 Es una web estática (HTML, CSS y un poco de JavaScript), sin dependencias ni proceso de compilación.
 
