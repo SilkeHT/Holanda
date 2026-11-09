@@ -153,13 +153,7 @@ a:hover { text-decoration-color: var(--ladrillo); }
 .band-dark :focus-visible { outline-color: var(--acero-claro); }
 
 /* Scalloped top edge, borrowed from the reference and drawn as canal-bridge arches. */
-/* Scalloped edge (canal-bridge arches), used once: on top of the footer. */
-.site-footer { position: relative; }
-.site-footer::before {
-  content: ""; position: absolute; left: 0; right: 0; top: -33px; height: 34px;
-  background: radial-gradient(circle at 50% 100%, var(--noche) 33px, transparent 34px) 0 0 / 88px 34px repeat-x;
-  pointer-events: none;
-}
+
 
 .section-head { display: grid; gap: 18px; margin-bottom: clamp(36px, 5vw, 56px); max-width: 760px; }
 .section-head p { margin: 0; font-size: 1.125rem; }
