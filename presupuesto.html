@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tu presupuesto al mes – Llegando a Holanda</title>
+<meta name="description" content="Calcula lo que vas a gastar al mes con datos reales de 2026.">
+<meta name="theme-color" content="#003049">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 30V12l6-6 6 6 6-6 6 6v18z' fill='%23669BBC' stroke='%23003049' stroke-width='2'/%3E%3Crect x='13' y='21' width='6' height='9' fill='%23C1121F'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="Llegando a Holanda: inicio">Llegando a Holanda</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" class="menu" aria-label="Páginas">
+      <ul>
+        <li><a href="llegada.html">Llegada</a></li>
+        <li><a href="alojamiento.html">Alojamiento</a></li>
+        <li><a href="ciudades.html">Ciudades</a></li>
+        <li><a href="presupuesto.html" aria-current="page">Presupuesto</a></li>
+        <li><a href="beca-duo.html">Beca DUO</a></li>
+        <li><a href="trabajo.html">Trabajo</a></li>
+        <li><a href="neerlandes.html">Neerlandés</a></li>
+        <li><a href="bici-y-tren.html">Bici y tren</a></li>
+        <li><a href="seguro.html">Seguro</a></li>
+        <li><a href="comunidad.html">Comunidad</a></li>
+        <li><a href="preguntas.html">Preguntas</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="band" id="presupuesto" aria-labelledby="pres-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h1 id="pres-title" class="page-title">Tu presupuesto al mes</h1>
+      <p>Elige tu ciudad y la calculadora rellena lo que gasta de media un estudiante universitario en Holanda en 2026. Cambia cualquier cifra para ajustarla a tu vida.</p>
+    </div>
+
+    <form class="budget" id="budget" novalidate>
+      <div class="budget-inputs">
+        <fieldset>
+          <legend>Tu situación</legend>
+          <div class="field">
+            <label for="b-city">Ciudad</label>
+            <select id="b-city" name="b-city">
+              <option value="950">Amsterdam (950 €)</option>
+              <option value="775">Utrecht (775 €)</option>
+              <option value="710">Rotterdam (710 €)</option>
+              <option value="595" selected>Tilburg (595 €)</option>
+              <option value="580">Groningen (580 €)</option>
+              <option value="550">Maastricht (550 €)</option>
+              <option value="540">Eindhoven (540 €)</option>
+              <option value="388">Enschede (388 €)</option>
+              <option value="660">Otra ciudad (media nacional, 660 €)</option>
+            </select>
+            <p class="hint">Alquiler mediano de una habitación según Kamernet (2026).</p>
+          </div>
+          <div class="field">
+            <span class="label" id="b-work-label">¿Trabajas en Holanda?</span>
+            <div class="segmented" role="radiogroup" aria-labelledby="b-work-label">
+              <label><input type="radio" name="b-work" id="b-work-no" value="no" checked> No</label>
+              <label><input type="radio" name="b-work" id="b-work-yes" value="yes"> Sí</label>
+            </div>
+            <p class="hint">Si trabajas, el seguro holandés es obligatorio: unos 158 € menos la ayuda <em>zorgtoeslag</em>, unos 27 € al mes.</p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Gastos al mes</legend>
+          <div class="field">
+            <label for="b-rent">Alquiler</label>
+            <div class="money"><input id="b-rent" name="b-rent" type="number" inputmode="decimal" min="0" step="1" value="595" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Se rellena con tu ciudad. Pon tu alquiler real si ya lo sabes.</p>
+          </div>
+          <div class="field">
+            <label for="b-food">Comida y supermercado</label>
+            <div class="money"><input id="b-food" name="b-food" type="number" inputmode="decimal" min="0" step="1" value="258" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Media de un estudiante: 258 €.</p>
+          </div>
+          <div class="field">
+            <label for="b-fun">Salir, ocio y deporte</label>
+            <div class="money"><input id="b-fun" name="b-fun" type="number" inputmode="decimal" min="0" step="1" value="150" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Valor orientativo: 150 €. Cámbialo según tu forma de vida.</p>
+          </div>
+          <div class="field">
+            <label for="b-insurance">Seguro médico</label>
+            <div class="money"><input id="b-insurance" name="b-insurance" type="number" inputmode="decimal" min="0" step="1" value="0" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Sin trabajo, la Tarjeta Sanitaria Europea es gratis.</p>
+          </div>
+          <div class="field">
+            <label for="b-transport">Transporte</label>
+            <div class="money"><input id="b-transport" name="b-transport" type="number" inputmode="decimal" min="0" step="1" value="70" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Bici, arreglos y algún tren. Media: 70 €.</p>
+          </div>
+          <div class="field">
+            <label for="b-clothes">Ropa</label>
+            <div class="money"><input id="b-clothes" name="b-clothes" type="number" inputmode="decimal" min="0" step="1" value="61" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Media de un estudiante: 61 €.</p>
+          </div>
+          <div class="field">
+            <label for="b-books">Otros</label>
+            <div class="money"><input id="b-books" name="b-books" type="number" inputmode="decimal" min="0" step="1" value="58" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Libros, material, móvil y otros gastos pequeños. Media: 58 €.</p>
+          </div>
+          <div class="field">
+            <label for="b-trips">Viajes a España</label>
+            <div class="money"><input id="b-trips" name="b-trips" type="number" inputmode="decimal" min="0" step="1" value="0" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Por ejemplo, 3 vuelos de 120 € al año son 30 € al mes.</p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ingresos al mes <span class="optional">(opcional)</span></legend>
+          <div class="field field-check">
+            <input type="checkbox" id="b-duo" name="b-duo">
+            <label for="b-duo">Tengo la beca DUO (324,52 €)</label>
+          </div>
+          <div class="field">
+            <label for="b-job">Sueldo del trabajo</label>
+            <div class="money"><input id="b-job" name="b-job" type="number" inputmode="decimal" min="0" step="1" value="0" data-income><span aria-hidden="true">€</span></div>
+            <p class="hint">Neto, lo que te llega a la cuenta.</p>
+          </div>
+          <div class="field">
+            <label for="b-home">Ayuda de casa</label>
+            <div class="money"><input id="b-home" name="b-home" type="number" inputmode="decimal" min="0" step="1" value="0" data-income><span aria-hidden="true">€</span></div>
+            <p class="hint">Lo que te mandan tus padres u otros ahorros.</p>
+          </div>
+        </fieldset>
+        <p class="budget-mini" aria-hidden="true"><span>Gastas al mes</span> <strong id="b-mini">1.192 €</strong></p>
+      </div>
+
+      <div class="budget-result" aria-live="polite">
+        <p class="result-label">Gastas al mes</p>
+        <p class="result-total"><output id="b-total" for="budget">1.192 €</output></p>
+        <div class="result-bar" id="b-bar" aria-hidden="true"></div>
+        <ul class="result-legend" id="b-legend"></ul>
+        <div class="result-balance" id="b-balance">
+          <p>Añade tus ingresos para ver cuánto te sobra o te falta cada mes.</p>
+        </div>
+        <p class="result-year">Al año: <strong id="b-year">14.304 €</strong></p>
+        <p class="result-tuition">Aparte, la matrícula: <strong>2.694 € al año</strong> (curso 2026/27). No está incluida en el total.</p>
+      </div>
+    </form>
+
+    <details class="more">
+      <summary>Leer más: de dónde salen las cifras y cómo ahorrar</summary>
+      <div class="more-body">
+        <div class="more-grid">
+          <div>
+            <h4>Las fuentes</h4>
+            <ul>
+              <li>Alquiler: mediana de habitaciones de estudiante en el informe de alquileres de <a href="https://kamernet.nl" target="_blank" rel="noopener">Kamernet</a> (primer y segundo trimestre de 2026).</li>
+              <li>Comida, ropa, transporte y otros gastos: encuesta a estudiantes universitarios de 2026 del <a href="https://www.nibud.nl" target="_blank" rel="noopener">Nibud</a>, el instituto holandés de economía doméstica. Para salir y ocio usamos 150 €, más cerca de lo que gasta un estudiante que controla su dinero (la media del Nibud es 256 €).</li>
+              <li>Matrícula (no se suma al total mensual) y beca: <a href="https://duo.nl" target="_blank" rel="noopener">DUO</a>, curso 2026/27.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Ideas para gastar menos</h4>
+            <ul>
+              <li>Compra en Lidl o Aldi y usa las ofertas semanales de la app de Albert Heijn.</li>
+              <li>Con la app Too Good To Go compras comida de restaurantes y tiendas a final del día por poco dinero.</li>
+              <li>Muchos bares y asociaciones de estudiantes tienen noches con precios más bajos.</li>
+              <li>El deporte en el centro deportivo de tu universidad cuesta mucho menos que un gimnasio normal.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Gastos de una sola vez</h4>
+            <ul>
+              <li>Fianza de la habitación: hasta dos meses de alquiler.</li>
+              <li>Bici y candados si la compras de segunda mano.</li>
+              <li>Muebles o cosas de casa si la habitación está vacía.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager" aria-label="Seguir la guía">
+  <div class="wrap pager-row">
+    <a class="pager-link pager-prev" href="ciudades.html"><span>Anterior</span><strong>Universidades y ciudades</strong></a>
+    <a class="pager-link pager-next" href="beca-duo.html"><span>Siguiente</span><strong>La beca DUO</strong></a>
+  </div>
+</nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-brand">Llegando a Holanda</p>
+      <p>Guía en español para estudiar en una universidad de los Países Bajos.</p>
+    </div>
+    <div>
+      <h2 class="footer-h">Fuentes oficiales</h2>
+      <ul>
+        <li><a href="https://www.studyinnl.org/" target="_blank" rel="noopener">Study in NL</a></li>
+        <li><a href="https://duo.nl/particulier/student-finance-citizens-eu-eer-switzerland-or-uk/" target="_blank" rel="noopener">DUO: becas para estudiantes de la UE</a></li>
+        <li><a href="https://www.government.nl/topics/personal-data/question-and-answer/registering-in-the-personal-records-database" target="_blank" rel="noopener">Registro en el ayuntamiento</a></li>
+        <li><a href="https://www.digid.nl/en" target="_blank" rel="noopener">DigiD</a></li>
+        <li><a href="https://www.belastingdienst.nl/wps/wcm/connect/en/benefits/benefits" target="_blank" rel="noopener">Ayudas: zorgtoeslag y huurtoeslag</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-h">Páginas</h2>
+      <ul>
+        <li><a href="llegada.html">Tu llegada, paso a paso</a></li>
+        <li><a href="alojamiento.html">Encontrar habitación</a></li>
+        <li><a href="ciudades.html">Universidades y ciudades</a></li>
+        <li><a href="presupuesto.html">Tu presupuesto al mes</a></li>
+        <li><a href="beca-duo.html">La beca DUO</a></li>
+        <li><a href="trabajo.html">Trabajar mientras estudias</a></li>
+        <li><a href="neerlandes.html">Clases de neerlandés</a></li>
+        <li><a href="bici-y-tren.html">Bici y tren</a></li>
+        <li><a href="seguro.html">Seguro médico</a></li>
+        <li><a href="comunidad.html">No llegas solo</a></li>
+        <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><p class="disclaimer">Información orientativa revisada en noviembre de 2026. Las normas y las cifras cambian: comprueba siempre los datos en las fuentes oficiales antes de tomar decisiones.</p></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
