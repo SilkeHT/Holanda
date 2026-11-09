@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tu llegada, paso a paso – Llegando a Holanda</title>
 <meta name="description" content="Los diez trámites en orden: empadronarte, BSN, DigiD, banco y médico.">
+<!-- share -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Llegando a Holanda">
+<meta property="og:title" content="Tu llegada, paso a paso – Llegando a Holanda">
+<meta property="og:description" content="Los diez trámites en orden: empadronarte, BSN, DigiD, banco y médico.">
+<meta property="og:url" content="https://silkeht.github.io/Holanda/llegada.html">
+<meta property="og:image" content="https://silkeht.github.io/Holanda/assets/compartir.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Casas de canal holandesas dibujadas en azul y rojo, con el texto Llegando a Holanda">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /share -->
 <meta name="theme-color" content="#003049">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +34,7 @@
     <a class="brand" href="index.html" aria-label="Llegando a Holanda: inicio">Llegando a Holanda</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
     <nav id="menu" class="menu" aria-label="Páginas">
-      <ul>
+      <ul class="menu-main">
         <li><a href="llegada.html" aria-current="page">Llegada</a></li>
         <li><a href="alojamiento.html">Alojamiento</a></li>
         <li><a href="ciudades.html">Ciudades</a></li>
@@ -32,6 +45,10 @@
         <li><a href="bici-y-tren.html">Bici y tren</a></li>
         <li><a href="seguro.html">Seguro</a></li>
         <li><a href="comunidad.html">Comunidad</a></li>
+      </ul>
+      <ul class="menu-extra">
+        <li><a href="calendario.html">Calendario</a></li>
+        <li><a href="glosario.html">Glosario</a></li>
         <li><a href="preguntas.html">Preguntas</a></li>
       </ul>
     </nav>
@@ -45,32 +62,37 @@
     <div class="section-head">
       <h1 id="guia-title" class="page-title">Tu llegada, paso a paso</h1>
       <p>Diez trámites en el orden en que conviene hacerlos. Si eres ciudadano de la UE no necesitas visado ni permiso de residencia, pero sí registrarte.</p>
+      <div class="progress" id="progreso">
+        <p class="progress-text" aria-live="polite"><strong id="progreso-num">0 de 10</strong> trámites hechos. Márcalos al terminar: se guardan en este navegador.</p>
+        <div class="progress-bar" aria-hidden="true"><span id="progreso-barra"></span></div>
+        <button type="button" class="progress-reset" id="progreso-borrar">Empezar de nuevo</button>
+      </div>
     </div>
 
     <div class="phases">
       <div class="phase">
         <h3>Antes de ir</h3>
         <ol class="steps" start="1">
-          <li class="step"><h4>Busca una habitación donde te puedas empadronar</h4><p>Sin dirección registrada no tendrás BSN. Pregunta siempre si la habitación permite <em>inschrijving</em> (inscripción).</p></li>
-          <li class="step"><h4>Pide el certificado de nacimiento plurilingüe</h4><p>Lo emite gratis el Registro Civil y la mayoría de ayuntamientos holandeses lo aceptan sin traducción ni apostilla.</p></li>
-          <li class="step"><h4>Lleva tu Tarjeta Sanitaria Europea</h4><p>Pídela en la <a href="https://www.seg-social.es" target="_blank" rel="noopener">Seguridad Social</a> y comprueba que tu DNI o pasaporte no caduca durante el curso.</p></li>
+          <li class="step"><h4>Busca una habitación donde te puedas empadronar</h4><p>Sin dirección registrada no tendrás BSN. Pregunta siempre si la habitación permite <em>inschrijving</em> (inscripción).</p><label class="step-done"><input type="checkbox" id="paso-1" data-step="1"> Hecho</label></li>
+          <li class="step"><h4>Pide el certificado de nacimiento plurilingüe</h4><p>Lo emite gratis el Registro Civil y la mayoría de ayuntamientos holandeses lo aceptan sin traducción ni apostilla.</p><label class="step-done"><input type="checkbox" id="paso-2" data-step="2"> Hecho</label></li>
+          <li class="step"><h4>Lleva tu Tarjeta Sanitaria Europea</h4><p>Pídela en la <a href="https://www.seg-social.es" target="_blank" rel="noopener">Seguridad Social</a> y comprueba que tu DNI o pasaporte no caduca durante el curso.</p><label class="step-done"><input type="checkbox" id="paso-3" data-step="3"> Hecho</label></li>
         </ol>
       </div>
       <div class="phase">
         <h3>La primera semana</h3>
         <ol class="steps" start="4">
-          <li class="step step-accent"><h4>Regístrate en el ayuntamiento (gemeente)</h4><p>Si te quedas más de 4 meses, tienes 5 días desde tu llegada. Pide cita online cuanto antes: ahí recibes tu BSN, tu número para todo.</p></li>
-          <li class="step"><h4>Abre una cuenta bancaria</h4><p>Con una cuenta holandesa pagas con iDEAL, el sistema de pago online que usa casi todo el país.</p></li>
-          <li class="step"><h4>Consigue una bici y dos candados</h4><p>De alquiler o de segunda mano. Te lo contamos en la sección <a href="bici-y-tren.html">Bici y tren</a>.</p></li>
+          <li class="step step-accent"><h4>Regístrate en el ayuntamiento (gemeente)</h4><p>Si te quedas más de 4 meses, tienes 5 días desde tu llegada. Pide cita online cuanto antes: ahí recibes tu BSN, tu número para todo.</p><label class="step-done"><input type="checkbox" id="paso-4" data-step="4"> Hecho</label></li>
+          <li class="step"><h4>Abre una cuenta bancaria</h4><p>Con una cuenta holandesa pagas con iDEAL, el sistema de pago online que usa casi todo el país.</p><label class="step-done"><input type="checkbox" id="paso-5" data-step="5"> Hecho</label></li>
+          <li class="step"><h4>Consigue una bici y dos candados</h4><p>De alquiler o de segunda mano. Te lo contamos en la sección <a href="bici-y-tren.html">Bici y tren</a>.</p><label class="step-done"><input type="checkbox" id="paso-6" data-step="6"> Hecho</label></li>
         </ol>
       </div>
       <div class="phase">
         <h3>El primer mes</h3>
         <ol class="steps" start="7">
-          <li class="step"><h4>Solicita tu <a href="https://www.digid.nl" target="_blank" rel="noopener">DigiD</a></h4><p>Es tu identidad digital para hacienda, DUO y el seguro. El código de activación llega por carta a tu dirección.</p></li>
-          <li class="step"><h4>Apúntate a un médico de cabecera (huisarts)</h4><p>Hazlo antes de ponerte enfermo: muchas consultas tienen lista de espera.</p></li>
-          <li class="step"><h4>Decide tu seguro médico</h4><p>Depende de si trabajas o no. Lo explicamos en la sección de <a href="seguro.html">seguro</a>.</p></li>
-          <li class="step"><h4>Pide la beca DUO si trabajas</h4><p>Trabajando unas horas al mes puedes tener derecho a beca; si tienes menos de 21 años, bastan muy pocas. Mira la sección <a href="beca-duo.html">DUO</a>.</p></li>
+          <li class="step"><h4>Solicita tu <a href="https://www.digid.nl" target="_blank" rel="noopener">DigiD</a></h4><p>Es tu identidad digital para hacienda, DUO y el seguro. El código de activación llega por carta a tu dirección.</p><label class="step-done"><input type="checkbox" id="paso-7" data-step="7"> Hecho</label></li>
+          <li class="step"><h4>Apúntate a un médico de cabecera (huisarts)</h4><p>Hazlo antes de ponerte enfermo: muchas consultas tienen lista de espera.</p><label class="step-done"><input type="checkbox" id="paso-8" data-step="8"> Hecho</label></li>
+          <li class="step"><h4>Decide tu seguro médico</h4><p>Depende de si trabajas o no. Lo explicamos en la sección de <a href="seguro.html">seguro</a>.</p><label class="step-done"><input type="checkbox" id="paso-9" data-step="9"> Hecho</label></li>
+          <li class="step"><h4>Pide la beca DUO si trabajas</h4><p>Trabajando unas horas al mes puedes tener derecho a beca; si tienes menos de 21 años, bastan muy pocas. Mira la sección <a href="beca-duo.html">DUO</a>.</p><label class="step-done"><input type="checkbox" id="paso-10" data-step="10"> Hecho</label></li>
         </ol>
       </div>
     </div>
@@ -103,7 +125,7 @@
 
 <nav class="pager" aria-label="Seguir la guía">
   <div class="wrap pager-row">
-    <a class="pager-link pager-prev" href="index.html"><span>Volver</span><strong>Inicio</strong></a>
+    <a class="pager-link pager-prev" href="calendario.html"><span>Anterior</span><strong>Cuándo hacer cada cosa</strong></a>
     <a class="pager-link pager-next" href="alojamiento.html"><span>Siguiente</span><strong>Encontrar habitación</strong></a>
   </div>
 </nav>
@@ -129,6 +151,7 @@
     <div>
       <h2 class="footer-h">Páginas</h2>
       <ul>
+        <li><a href="calendario.html">Cuándo hacer cada cosa</a></li>
         <li><a href="llegada.html">Tu llegada, paso a paso</a></li>
         <li><a href="alojamiento.html">Encontrar habitación</a></li>
         <li><a href="ciudades.html">Universidades y ciudades</a></li>
@@ -140,6 +163,7 @@
         <li><a href="seguro.html">Seguro médico</a></li>
         <li><a href="comunidad.html">No llegas solo</a></li>
         <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+        <li><a href="glosario.html">Palabras holandesas</a></li>
         <li><a href="index.html#sobre-mi">Quién está detrás</a></li>
       </ul>
     </div>

@@ -106,3 +106,38 @@
   form.addEventListener('submit', function (e) { e.preventDefault(); });
   update();
 })();
+
+// Arrival checklist: ticks are kept in this browser only.
+(function () {
+  var boxes = document.querySelectorAll('input[data-step]');
+  if (!boxes.length) return;
+  var KEY = 'llegando-a-holanda:llegada';
+  var done = [];
+  try { done = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { done = []; }
+  var num = document.getElementById('progreso-num');
+  var bar = document.getElementById('progreso-barra');
+
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) { /* storage blocked: ticks last for this visit */ }
+  }
+  function render() {
+    boxes.forEach(function (b) {
+      b.checked = done.indexOf(b.dataset.step) !== -1;
+      b.closest('.step').classList.toggle('is-done', b.checked);
+    });
+    num.textContent = done.length + ' de ' + boxes.length;
+    bar.style.width = (done.length / boxes.length * 100) + '%';
+  }
+  boxes.forEach(function (b) {
+    b.addEventListener('change', function () {
+      var i = done.indexOf(b.dataset.step);
+      if (b.checked && i === -1) done.push(b.dataset.step);
+      if (!b.checked && i !== -1) done.splice(i, 1);
+      save(); render();
+    });
+  });
+  document.getElementById('progreso-borrar').addEventListener('click', function () {
+    done = []; save(); render();
+  });
+  render();
+})();

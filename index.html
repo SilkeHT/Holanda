@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Llegando a Holanda</title>
 <meta name="description" content="Guía en español para estudiantes que van a estudiar a una universidad de los Países Bajos: llegada, alojamiento, ciudades, presupuesto, beca DUO, trabajo, neerlandés, bici y tren, y seguro médico.">
+<!-- share -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Llegando a Holanda">
+<meta property="og:title" content="Llegando a Holanda">
+<meta property="og:description" content="Guía en español para estudiantes que van a estudiar a una universidad de los Países Bajos: llegada, alojamiento, ciudades, presupuesto, beca DUO, trabajo, neerlandés, bici y tren, y seguro médico.">
+<meta property="og:url" content="https://silkeht.github.io/Holanda/">
+<meta property="og:image" content="https://silkeht.github.io/Holanda/assets/compartir.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Casas de canal holandesas dibujadas en azul y rojo, con el texto Llegando a Holanda">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /share -->
 <meta name="theme-color" content="#003049">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +34,7 @@
     <a class="brand" href="index.html" aria-current="page" aria-label="Llegando a Holanda: inicio">Llegando a Holanda</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
     <nav id="menu" class="menu" aria-label="Páginas">
-      <ul>
+      <ul class="menu-main">
         <li><a href="llegada.html">Llegada</a></li>
         <li><a href="alojamiento.html">Alojamiento</a></li>
         <li><a href="ciudades.html">Ciudades</a></li>
@@ -32,6 +45,10 @@
         <li><a href="bici-y-tren.html">Bici y tren</a></li>
         <li><a href="seguro.html">Seguro</a></li>
         <li><a href="comunidad.html">Comunidad</a></li>
+      </ul>
+      <ul class="menu-extra">
+        <li><a href="calendario.html">Calendario</a></li>
+        <li><a href="glosario.html">Glosario</a></li>
         <li><a href="preguntas.html">Preguntas</a></li>
       </ul>
     </nav>
@@ -366,22 +383,44 @@
   <div class="wrap">
     <div class="section-head">
       <h2 id="indice-title">Todo lo que necesitas</h2>
-      <p>Cada tema tiene su propia página. Si acabas de llegar, empieza por la llegada y sigue el orden: al final de cada página tienes un enlace a la siguiente.</p>
+      <p>Cada tema tiene su propia página, ordenadas según el momento en que las vas a necesitar. Al final de cada página tienes un enlace a la siguiente.</p>
     </div>
-    <ul class="page-index">
-      <li><a class="index-card" href="llegada.html"><h3>Tu llegada, paso a paso</h3><p>Los diez trámites en orden: empadronarte, BSN, DigiD, banco y médico.</p></a></li>
-      <li><a class="index-card" href="alojamiento.html"><h3>Encontrar habitación</h3><p>Dónde buscar habitación, cuánto cuesta y cómo evitar estafas.</p></a></li>
-      <li><a class="index-card" href="ciudades.html"><h3>Universidades y ciudades</h3><p>Las universidades del país y cómo es vivir en cada ciudad.</p></a></li>
-      <li><a class="index-card" href="presupuesto.html"><h3>Tu presupuesto al mes</h3><p>Calcula lo que vas a gastar al mes con datos reales de 2026.</p></a></li>
-      <li><a class="index-card" href="beca-duo.html"><h3>La beca DUO</h3><p>Quién puede pedirla, cuánto da y cuántas horas tienes que trabajar.</p></a></li>
-      <li><a class="index-card" href="trabajo.html"><h3>Trabajar mientras estudias</h3><p>Salario mínimo por edad, dónde buscar trabajo y tus primeras nóminas.</p></a></li>
-      <li><a class="index-card" href="neerlandes.html"><h3>Clases de neerlandés</h3><p>Cursos gratis en la universidad, el examen oficial y tus primeras frases.</p></a></li>
-      <li><a class="index-card" href="bici-y-tren.html"><h3>Bici y tren</h3><p>Swapfiets, Marktplaats, multas por aparcar mal y el abono de estudiante.</p></a></li>
-      <li><a class="index-card" href="seguro.html"><h3>Seguro médico</h3><p>Qué seguro necesitas si trabajas o si solo estudias, y cuánto cuesta.</p></a></li>
-      <li><a class="index-card" href="comunidad.html"><h3>No llegas solo</h3><p>Conoce a otros estudiantes españoles y encuentra planes en tu ciudad.</p></a></li>
-      <li><a class="index-card" href="preguntas.html"><h3>Preguntas frecuentes</h3><p>Visado, inscripción en la universidad, idioma, dinero y más.</p></a></li>
-      <li><a class="index-card" href="#sobre-mi"><h3>Quién está detrás</h3><p>Silke, estudiante de IBA en Tilburg, cuenta por qué hizo esta guía.</p></a></li>
-    </ul>
+    <div class="page-index">
+      <div class="index-group">
+        <h3>Antes de ir</h3>
+        <ul>
+          <li><a class="index-card" href="calendario.html"><h4>Cuándo hacer cada cosa</h4><p>Qué hacer cada mes: inscripción, habitación, papeles y llegada.</p></a></li>
+          <li><a class="index-card" href="ciudades.html"><h4>Universidades y ciudades</h4><p>Las universidades del país y cómo es vivir en cada ciudad.</p></a></li>
+          <li><a class="index-card" href="alojamiento.html"><h4>Encontrar habitación</h4><p>Dónde buscar habitación, cuánto cuesta y cómo evitar estafas.</p></a></li>
+        </ul>
+      </div>
+      <div class="index-group">
+        <h3>Al llegar</h3>
+        <ul>
+          <li><a class="index-card" href="llegada.html"><h4>Tu llegada, paso a paso</h4><p>Los diez trámites en orden, con una lista para ir marcando.</p></a></li>
+          <li><a class="index-card" href="seguro.html"><h4>Seguro médico</h4><p>Qué seguro necesitas si trabajas o si solo estudias, y cuánto cuesta.</p></a></li>
+          <li><a class="index-card" href="bici-y-tren.html"><h4>Bici y tren</h4><p>Swapfiets, Marktplaats, multas por aparcar mal y el abono de estudiante.</p></a></li>
+          <li><a class="index-card" href="neerlandes.html"><h4>Clases de neerlandés</h4><p>Cursos gratis en la universidad, el examen oficial y tus primeras frases.</p></a></li>
+        </ul>
+      </div>
+      <div class="index-group">
+        <h3>Dinero y trabajo</h3>
+        <ul>
+          <li><a class="index-card" href="presupuesto.html"><h4>Tu presupuesto al mes</h4><p>Calcula lo que vas a gastar al mes con datos reales de 2026.</p></a></li>
+          <li><a class="index-card" href="beca-duo.html"><h4>La beca DUO</h4><p>Quién puede pedirla, cuánto da y cuántas horas tienes que trabajar.</p></a></li>
+          <li><a class="index-card" href="trabajo.html"><h4>Trabajar mientras estudias</h4><p>Salario mínimo por edad, dónde buscar trabajo y tus primeras nóminas.</p></a></li>
+        </ul>
+      </div>
+      <div class="index-group">
+        <h3>Y además</h3>
+        <ul>
+          <li><a class="index-card" href="comunidad.html"><h4>No llegas solo</h4><p>Conoce a otros estudiantes españoles y planes en tu ciudad.</p></a></li>
+          <li><a class="index-card" href="preguntas.html"><h4>Preguntas frecuentes</h4><p>Visado, inscripción, idioma, dinero y más.</p></a></li>
+          <li><a class="index-card" href="glosario.html"><h4>Palabras holandesas</h4><p>Gemeente, huisarts, zorgtoeslag… explicadas en una línea.</p></a></li>
+          <li><a class="index-card" href="#sobre-mi"><h4>Quién está detrás</h4><p>Silke, estudiante de IBA en Tilburg, cuenta por qué hizo esta guía.</p></a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -435,6 +474,7 @@
     <div>
       <h2 class="footer-h">Páginas</h2>
       <ul>
+        <li><a href="calendario.html">Cuándo hacer cada cosa</a></li>
         <li><a href="llegada.html">Tu llegada, paso a paso</a></li>
         <li><a href="alojamiento.html">Encontrar habitación</a></li>
         <li><a href="ciudades.html">Universidades y ciudades</a></li>
@@ -446,6 +486,7 @@
         <li><a href="seguro.html">Seguro médico</a></li>
         <li><a href="comunidad.html">No llegas solo</a></li>
         <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+        <li><a href="glosario.html">Palabras holandesas</a></li>
         <li><a href="index.html#sobre-mi">Quién está detrás</a></li>
       </ul>
     </div>
