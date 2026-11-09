@@ -618,3 +618,12 @@ h1.page-title { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 1; max-wid
 .pager-next span { color: var(--papel); }
 .pager-next:hover { box-shadow: 0 4px 0 var(--lava); }
 .site-header { border-bottom-color: var(--ladrillo); }
+
+/* ---------- Footer only on the home page; small note under the pager elsewhere ---------- */
+.pager-note { font-size: .875rem; color: var(--text-soft); margin: 0; padding-bottom: 28px; max-width: none; }
+.help-list { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 16px; }
+.help-list li { display: grid; gap: 0; line-height: 1.4; }
+.help-list strong { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; line-height: 1.1; color: var(--acero-claro); }
+.site-footer .help-list li { padding: 0; }
+.btn-footer { background: var(--papel); color: var(--noche); border-color: var(--papel); }
+.btn-footer:hover { background: var(--blanco); }
