@@ -29,7 +29,7 @@
         <li><a href="#duo">Beca DUO</a></li>
         <li><a href="#trabajo">Trabajo</a></li>
         <li><a href="#neerlandes">Neerlandés</a></li>
-        <li><a href="#bici">Bici</a></li>
+        <li><a href="#bici">Bici y tren</a></li>
         <li><a href="#seguro">Seguro</a></li>
         <li><a href="#comunidad">Comunidad</a></li>
       </ul>
@@ -350,7 +350,7 @@
 <circle cx="1303.0" cy="406" r="9" fill="#C1121F" stroke="#003049" stroke-width="2.5"/>
 <rect x="1453" y="408" width="14" height="62" rx="3" fill="#C1121F" stroke="#003049" stroke-width="2.5"/>
 <circle cx="1460" cy="406" r="9" fill="#C1121F" stroke="#003049" stroke-width="2.5"/>
-<a href="#bici" class="bike-link" aria-label="Ir a la sección La bici"><g class="bike" fill="none" stroke="#003049" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<a href="#bici" class="bike-link" aria-label="Ir a la sección Bici y tren"><g class="bike" fill="none" stroke="#003049" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
 <circle cx="696.0" cy="464" r="36"/><circle cx="806.0" cy="464" r="36"/>
 <path d="M696.0,464 L736.0,412 L789.0,412 L806.0,464 M696.0,464 L753.0,464 L789.0,412 M753.0,464 L729.0,398 M717.0,398 H743.0 M789.0,412 L783.0,390 L801.0,384" stroke="#669BBC"/>
 <path d="M696.0,464 L736.0,412 L789.0,412 L806.0,464 M696.0,464 L753.0,464 L789.0,412" stroke="#003049" stroke-width="2" opacity=".6"/>
@@ -383,7 +383,7 @@
         <ol class="steps" start="4">
           <li class="step step-accent"><h4>Regístrate en el ayuntamiento (gemeente)</h4><p>Si te quedas más de 4 meses, tienes 5 días desde tu llegada. Pide cita online cuanto antes: ahí recibes tu BSN, tu número para todo.</p></li>
           <li class="step"><h4>Abre una cuenta bancaria</h4><p>Con una cuenta holandesa pagas con iDEAL, el sistema de pago online que usa casi todo el país.</p></li>
-          <li class="step"><h4>Consigue una bici y dos candados</h4><p>De alquiler o de segunda mano. Te lo contamos en la sección <a href="#bici">La bici</a>.</p></li>
+          <li class="step"><h4>Consigue una bici y dos candados</h4><p>De alquiler o de segunda mano. Te lo contamos en la sección <a href="#bici">Bici y tren</a>.</p></li>
         </ol>
       </div>
       <div class="phase">
@@ -574,13 +574,8 @@
           </div>
           <div class="field">
             <label for="b-fun">Salir, ocio y deporte</label>
-            <div class="money"><input id="b-fun" name="b-fun" type="number" inputmode="decimal" min="0" step="1" value="256" data-cost><span aria-hidden="true">€</span></div>
-            <p class="hint">Media de un estudiante: 256 €.</p>
-          </div>
-          <div class="field">
-            <label for="b-tuition">Matrícula</label>
-            <div class="money"><input id="b-tuition" name="b-tuition" type="number" inputmode="decimal" min="0" step="1" value="225" data-cost><span aria-hidden="true">€</span></div>
-            <p class="hint">2.694 € al año repartidos en 12 meses.</p>
+            <div class="money"><input id="b-fun" name="b-fun" type="number" inputmode="decimal" min="0" step="1" value="150" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Valor orientativo: 150 €. Cámbialo según tu forma de vida.</p>
           </div>
           <div class="field">
             <label for="b-insurance">Seguro médico</label>
@@ -598,14 +593,9 @@
             <p class="hint">Media de un estudiante: 61 €.</p>
           </div>
           <div class="field">
-            <label for="b-books">Libros y material</label>
-            <div class="money"><input id="b-books" name="b-books" type="number" inputmode="decimal" min="0" step="1" value="43" data-cost><span aria-hidden="true">€</span></div>
-            <p class="hint">Media de un estudiante: 43 €.</p>
-          </div>
-          <div class="field">
-            <label for="b-phone">Móvil</label>
-            <div class="money"><input id="b-phone" name="b-phone" type="number" inputmode="decimal" min="0" step="1" value="15" data-cost><span aria-hidden="true">€</span></div>
-            <p class="hint">Media de un estudiante: 15 €.</p>
+            <label for="b-books">Otros</label>
+            <div class="money"><input id="b-books" name="b-books" type="number" inputmode="decimal" min="0" step="1" value="58" data-cost><span aria-hidden="true">€</span></div>
+            <p class="hint">Libros, material, móvil y otros gastos pequeños. Media: 58 €.</p>
           </div>
           <div class="field">
             <label for="b-trips">Viajes a España</label>
@@ -631,18 +621,19 @@
             <p class="hint">Lo que te mandan tus padres u otros ahorros.</p>
           </div>
         </fieldset>
-        <p class="budget-mini" aria-hidden="true"><span>Gastas al mes</span> <strong id="b-mini">1.523 €</strong></p>
+        <p class="budget-mini" aria-hidden="true"><span>Gastas al mes</span> <strong id="b-mini">1.192 €</strong></p>
       </div>
 
       <div class="budget-result" aria-live="polite">
         <p class="result-label">Gastas al mes</p>
-        <p class="result-total"><output id="b-total" for="budget">1.523 €</output></p>
+        <p class="result-total"><output id="b-total" for="budget">1.192 €</output></p>
         <div class="result-bar" id="b-bar" aria-hidden="true"></div>
         <ul class="result-legend" id="b-legend"></ul>
         <div class="result-balance" id="b-balance">
           <p>Añade tus ingresos para ver cuánto te sobra o te falta cada mes.</p>
         </div>
-        <p class="result-year">Al año: <strong id="b-year">18.276 €</strong></p>
+        <p class="result-year">Al año: <strong id="b-year">14.304 €</strong></p>
+        <p class="result-tuition">Aparte, la matrícula: <strong>2.694 € al año</strong> (curso 2026/27). No está incluida en el total.</p>
       </div>
     </form>
 
@@ -654,8 +645,8 @@
             <h4>Las fuentes</h4>
             <ul>
               <li>Alquiler: mediana de habitaciones de estudiante en el informe de alquileres de <a href="https://kamernet.nl" target="_blank" rel="noopener">Kamernet</a> (primer y segundo trimestre de 2026).</li>
-              <li>Comida, ocio, ropa, móvil, libros y transporte: encuesta a estudiantes universitarios de 2026 del <a href="https://www.nibud.nl" target="_blank" rel="noopener">Nibud</a>, el instituto holandés de economía doméstica.</li>
-              <li>Matrícula y beca: <a href="https://duo.nl" target="_blank" rel="noopener">DUO</a>, curso 2026/27.</li>
+              <li>Comida, ropa, transporte y otros gastos: encuesta a estudiantes universitarios de 2026 del <a href="https://www.nibud.nl" target="_blank" rel="noopener">Nibud</a>, el instituto holandés de economía doméstica. Para salir y ocio usamos 150 €, más cerca de lo que gasta un estudiante que controla su dinero (la media del Nibud es 256 €).</li>
+              <li>Matrícula (no se suma al total mensual) y beca: <a href="https://duo.nl" target="_blank" rel="noopener">DUO</a>, curso 2026/27.</li>
             </ul>
           </div>
           <div>
@@ -879,8 +870,8 @@
 <section class="band band-dark scallop" id="bici" aria-labelledby="bici-title">
   <div class="wrap">
     <div class="section-head">
-      <h2 id="bici-title">La bici</h2>
-      <p>En Holanda la bici es tu transporte para todo: clase, compra, trabajo y fiesta. Tienes tres formas de conseguir una.</p>
+      <h2 id="bici-title">Bici y tren</h2>
+      <p>En tu ciudad irás en bici a todas partes: clase, compra, trabajo y fiesta. Para viajar a otras ciudades, el tren. Tienes tres formas de conseguir una bici.</p>
     </div>
     <ul class="bike-options">
       <li class="bike-option">
@@ -903,6 +894,26 @@
       <h3 id="multa-title">Aparca bien o te quedas sin bici</h3>
       <p>Si dejas la bici mal aparcada, el ayuntamiento se la lleva al depósito (<em>fietsdepot</em>) y tienes que pagar para recuperarla. <strong>En Tilburg son unos 15 €</strong>; en otras ciudades va de gratis a unos 50 €. Aparca siempre en los aparcamientos de bicis (<em>fietsenstalling</em>) y mira las señales en estaciones y centros.</p>
     </aside>
+
+    <div class="train">
+      <h3>Viajar en tren</h3>
+      <div class="train-grid">
+        <div class="train-option">
+          <h4>Con la beca DUO: el abono de estudiante</h4>
+          <p>Si tienes beca DUO, recibes el <em>studentenreisproduct</em> y eliges uno de estos dos abonos:</p>
+          <ul>
+            <li><strong>Abono de semana:</strong> viajas gratis de lunes a viernes y con un 40 % de descuento el fin de semana.</li>
+            <li><strong>Abono de fin de semana:</strong> viajas gratis desde el viernes por la tarde hasta el domingo, y entre semana con un 40 % de descuento (antes de las 9:00 pagas el precio normal).</li>
+          </ul>
+          <p class="small-print">En autobús, tranvía y metro el descuento es del 34 %. Puedes cambiar de abono dos veces al año en <a href="https://duo.nl" target="_blank" rel="noopener">DUO</a>.</p>
+        </div>
+        <div class="train-option train-price">
+          <h4>Sin abono, el tren es caro</h4>
+          <p class="train-num">25 €</p>
+          <p>Lo que cuesta, más o menos, un billete de ida de Tilburg a Amsterdam. Paga con tu tarjeta bancaria sin contacto en los torniquetes, o mira las ofertas de <a href="https://www.ns.nl" target="_blank" rel="noopener">NS</a>, como el descuento <em>Dal Voordeel</em> fuera de hora punta.</p>
+        </div>
+      </div>
+    </div>
     <details class="more">
       <summary>Leer más: normas y trucos de la bici</summary>
       <div class="more-body">
@@ -1040,7 +1051,7 @@
       <details><summary>¿Necesito visado o permiso de residencia?</summary><p>No. Con DNI o pasaporte español en vigor puedes vivir, estudiar y trabajar en los Países Bajos. Solo tienes que empadronarte en el ayuntamiento si te quedas más de 4 meses.</p></details>
       <details><summary>¿Cómo me inscribo en la universidad?</summary><p>A través de <a href="https://www.studielink.nl" target="_blank" rel="noopener">Studielink</a>, el portal nacional. Para la mayoría de grados el plazo es el 1 de mayo; para los grados con plazas limitadas (<em>numerus fixus</em>), el 15 de enero. Consulta siempre la web de tu universidad.</p></details>
       <details><summary>¿Puedo estudiar en inglés?</summary><p>Sí. Hay cientos de grados y másteres en inglés. Normalmente te pedirán un certificado de nivel (IELTS, TOEFL o Cambridge).</p></details>
-      <details><summary>¿Cuánto dinero necesito al mes?</summary><p>Con los datos de 2026, un estudiante gasta de media entre 1.300 y 1.700 € al mes con la matrícula incluida, según la ciudad. Calcula el tuyo en la <a href="#presupuesto">calculadora de presupuesto</a>.</p></details>
+      <details><summary>¿Cuánto dinero necesito al mes?</summary><p>Con los datos de 2026, entre unos 1.000 € al mes (Enschede) y 1.550 € (Amsterdam), sin contar la matrícula de 2.694 € al año. Calcula el tuyo en la <a href="#presupuesto">calculadora de presupuesto</a>.</p></details>
       <details><summary>¿Tengo que hablar neerlandés?</summary><p>No para estudiar un grado en inglés. Pero te ayudará a encontrar trabajo, a entender las cartas oficiales y a integrarte. Mira la sección de <a href="#neerlandes">neerlandés</a>.</p></details>
       <details><summary>¿Qué es el BSN y para qué sirve?</summary><p>Es tu número de identificación ciudadana. Lo necesitas para trabajar, abrir una cuenta, ir al médico, pedir la beca y presentar la declaración de la renta. Te lo dan al empadronarte.</p></details>
       <details><summary>¿Puedo seguir cobrando una beca española?</summary><p>Algunas becas del Ministerio de Educación y de comunidades autónomas permiten estudiar fuera. Consulta las condiciones de cada convocatoria antes de irte.</p></details>
@@ -1106,7 +1117,7 @@
         <li><a href="#duo">Beca DUO</a></li>
         <li><a href="#trabajo">Trabajo</a></li>
         <li><a href="#neerlandes">Neerlandés</a></li>
-        <li><a href="#bici">La bici</a></li>
+        <li><a href="#bici">Bici y tren</a></li>
         <li><a href="#seguro">Seguro médico</a></li>
         <li><a href="#faq">Preguntas frecuentes</a></li>
       </ul>

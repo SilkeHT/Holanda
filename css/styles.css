@@ -481,3 +481,17 @@ td:last-child, th:last-child { font-variant-numeric: tabular-nums; }
   }
   .budget-mini strong { font-family: var(--font-display); font-weight: 900; font-size: 1.75rem; line-height: 1; font-variant-numeric: tabular-nums; }
 }
+.result-tuition { margin: 10px 0 0; font-size: .875rem; color: var(--acero-claro); }
+.result-tuition strong { color: var(--papel); }
+
+/* ---------- Trains (inside the dark bike band) ---------- */
+.train { margin-top: clamp(40px, 5vw, 64px); }
+.train > h3 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 20px; }
+.train-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 860px) { .train-grid { grid-template-columns: 1fr; } }
+.train-option { border-top: 3px solid var(--acero); padding-top: 16px; }
+.train-option h4 { font-family: var(--font-display); font-weight: 800; font-size: 1.625rem; line-height: 1.1; margin-bottom: 10px; }
+.train-option ul { padding-left: 20px; display: grid; gap: 10px; margin: 0 0 14px; max-width: 64ch; }
+.train-option li::marker { color: var(--acero); }
+.train-num { font-family: var(--font-display); font-weight: 900; font-size: clamp(4rem, 8vw, 5.5rem); line-height: .9; color: var(--acero-claro); margin: 0 0 10px; }
+.train-price p:last-child { margin: 0; max-width: 42ch; }

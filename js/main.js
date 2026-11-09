@@ -32,9 +32,8 @@
     { ids: ['b-rent'], label: 'Alquiler', cls: 'c-rent' },
     { ids: ['b-food'], label: 'Comida', cls: 'c-food' },
     { ids: ['b-fun'], label: 'Salir y ocio', cls: 'c-fun' },
-    { ids: ['b-tuition'], label: 'Matrícula', cls: 'c-tuition' },
     { ids: ['b-insurance'], label: 'Seguro', cls: 'c-insurance' },
-    { ids: ['b-transport', 'b-clothes', 'b-books', 'b-phone', 'b-trips'], label: 'Resto', cls: 'c-rest' }
+    { ids: ['b-transport', 'b-clothes', 'b-books', 'b-trips'], label: 'Resto', cls: 'c-rest' }
   ];
 
   function euros(n) {
