@@ -83,7 +83,7 @@ a:hover { text-decoration-color: var(--ladrillo); }
 .menu a:hover { border-bottom-color: var(--acero); }
 .menu-btn { display: none; }
 
-@media (max-width: 1100px) {
+@media (max-width: 1160px) {
   .js .menu-btn {
     display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px;
     font: 700 1rem var(--font-body); color: var(--papel); background: var(--noche);
@@ -495,14 +495,14 @@ td:last-child, th:last-child { font-variant-numeric: tabular-nums; }
 .train-price p:last-child { margin: 0; max-width: 42ch; }
 
 /* ---------- Multi-page: header nav on its own row, page titles, index, pager ---------- */
-@media (min-width: 1101px) {
+@media (min-width: 1161px) {
   .header-row { flex-wrap: wrap; row-gap: 0; padding-top: 10px; }
   .menu { flex-basis: 100%; }
   .menu ul { gap: 2px 20px; }
   .menu a { font-size: .96875rem; }
 }
 .menu a[aria-current="page"] { border-bottom-color: var(--noche); }
-@media (max-width: 1100px) {
+@media (max-width: 1160px) {
   .menu a[aria-current="page"] { border-bottom-color: transparent; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; }
 }
 
@@ -539,12 +539,12 @@ h1.page-title { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 1; max-wid
 
 /* ---------- Header: main topics + small extra links ---------- */
 .menu-extra { list-style: none; margin: 0; padding: 0; }
-@media (min-width: 1101px) {
+@media (min-width: 1161px) {
   .header-row { position: relative; }
   .menu-extra { position: absolute; top: 14px; right: var(--gutter); display: flex; gap: 18px; }
   .menu-extra a { font-size: .9375rem; color: var(--text-soft); padding: 6px 0; }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1160px) {
   .menu-extra { display: flex; flex-direction: column; border-top: 3px solid var(--noche); margin-top: 8px; }
   .menu-extra li + li { border-top: 1px solid rgba(0, 48, 73, .2); }
 }
@@ -673,3 +673,7 @@ h1.page-title { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 1; max-wid
 .band-red .index-card:hover h4, .band-red .index-card:focus-visible h4 { color: var(--papel); }
 .intro { border-top: 0; }
 .band.band-red .section-head p { color: var(--papel); }
+
+/* ---------- Menu: "Todo lo que necesitas" first, in red ---------- */
+.menu a.menu-highlight { color: var(--ladrillo); font-weight: 700; }
+.menu a.menu-highlight:hover, .menu a.menu-highlight[aria-current="page"] { border-bottom-color: var(--ladrillo); }
