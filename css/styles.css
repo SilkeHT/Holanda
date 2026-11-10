@@ -703,3 +703,13 @@ h1.page-title { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 1; max-wid
   .menu-extra a { padding: 6px 0; }
 }
 .gp-box > p, .gp-box .ticks { max-width: none; }
+
+/* ---------- Text always fills its column (no half-empty rows on wide screens) ---------- */
+.lead, .lead-sm, .section-head, .ticks, .small, .fact p:last-child, .faq details p,
+.more-body, .more-body > p, .more-body > ul, .bike-option p:last-child, .fine-box,
+.postcard-message p, .train-option ul, .train-price p:last-child, .index-card p,
+.timeline, .letter-group, .term dd, .unis-lang, .unis-lang > p, .how-to-pay > p, .how-to-pay ol,
+.ask-box p, .intro-body > p, .gp-box, .gp-box > p, .decision, .progress,
+.split p, .split > div > p, .phrases dd, .tl-body ul, .warning ul, .note, .branch .ticks,
+.ticket .ticks, .mini-steps, .city p { max-width: none; }
+.decision-q { max-width: 26ch; }
