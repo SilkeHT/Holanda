@@ -1,11 +1,11 @@
 # Holanda
 
-Web universidad holanda: **Llegando a Holanda**, una guía en español para estudiantes que van a estudiar a una universidad de los Países Bajos.
+Web universidad holanda: **Estudiar en Holanda**, una guía en español para estudiantes que van a estudiar a una universidad de los Países Bajos.
 
 Es una web estática (HTML, CSS y un poco de JavaScript), sin dependencias ni proceso de compilación.
 
 - `index.html`: página de inicio (casas de canal, índice de temas y "Quién está detrás").
-- Una página por tema: `llegada.html`, `alojamiento.html`, `ciudades.html`, `presupuesto.html`, `beca-duo.html`, `trabajo.html`, `neerlandes.html`, `bici-y-tren.html`, `seguro.html`, `comunidad.html`, `preguntas.html`, `calendario.html` (qué hacer cada mes) y `glosario.html` (palabras holandesas).
+- Una página por tema: `llegada.html`, `alojamiento.html`, `ciudades.html`, `presupuesto.html`, `beca-duo.html`, `trabajo.html`, `holandes.html`, `bici-y-tren.html`, `seguro.html`, `comunidad.html`, `preguntas.html`, `calendario.html` (qué hacer cada mes) y `glosario.html` (palabras holandesas).
 - `assets/compartir.png`: imagen que aparece al compartir el enlace en WhatsApp o redes.
 - `css/styles.css`: estilos y paleta de colores (compartidos por todas las páginas).
 - `js/main.js`: menú en móvil, calculadora de presupuesto y lista de llegada (se guarda en el navegador de cada persona).
