@@ -702,3 +702,4 @@ h1.page-title { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 1; max-wid
   .menu-extra { position: absolute; top: 18px; right: var(--gutter); padding-bottom: 0; gap: 16px; }
   .menu-extra a { padding: 6px 0; }
 }
+.gp-box > p, .gp-box .ticks { max-width: none; }
