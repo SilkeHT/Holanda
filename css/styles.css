@@ -677,3 +677,5 @@ h1.page-title { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 1; max-wid
 /* ---------- Menu: "Todo lo que necesitas" first, in red ---------- */
 .menu a.menu-highlight { color: var(--ladrillo); font-weight: 700; }
 .menu a.menu-highlight:hover, .menu a.menu-highlight[aria-current="page"] { border-bottom-color: var(--ladrillo); }
+.intro-body p, .intro-body li { font-size: 1.0625rem; }
+.intro-body .intro-note { font-size: 1.0625rem; }
