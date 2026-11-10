@@ -12,6 +12,6 @@ Es una web estática (HTML, CSS y un poco de JavaScript), sin dependencias ni pr
 
 El menú y el pie de página están repetidos en cada página: si cambias uno, cámbialo en todas.
 
-Para verla, abre `index.html` en el navegador. Se publica con GitHub Pages desde la rama `main`.
+Para verla, abre `index.html` en el navegador. Se publica con GitHub Pages desde la rama `main` en https://estudiarenholanda.github.io/estudiarenholanda/ y cuenta las visitas con GoatCounter (https://estudiarenholanda.goatcounter.com).
 
 Las cifras (salario mínimo, beca DUO, seguro médico) están revisadas en noviembre de 2026; conviene actualizarlas cada año.
