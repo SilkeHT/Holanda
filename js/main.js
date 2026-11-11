@@ -21,6 +21,27 @@
   });
 })();
 
+// "Guía" dropdown in the header.
+(function () {
+  var btn = document.querySelector('.guides-btn');
+  var panel = document.getElementById('guides-panel');
+  if (!btn || !panel) return;
+  function setOpen(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  }
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setOpen(btn.getAttribute('aria-expanded') !== 'true');
+  });
+  document.addEventListener('click', function (e) {
+    if (!panel.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && panel.classList.contains('open')) { setOpen(false); btn.focus(); }
+  });
+})();
+
 // Budget calculator: every amount is editable; city and work status prefill rent and insurance.
 (function () {
   var form = document.getElementById('budget');

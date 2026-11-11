@@ -780,3 +780,49 @@ main [id] { scroll-margin-top: 16px; }
 .budget legend { float: none; display: block; }
 .budget .field { grid-template-columns: minmax(0, 1fr); }
 .money input { width: 100%; }
+
+/* =====================================================================
+   Header with "Guía" dropdown (Nov 2026). Overrides the older menu rules.
+   ===================================================================== */
+.guides-btn {
+  display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; cursor: pointer;
+  font: 600 1rem var(--font-body); color: var(--noche); padding: 10px 0; border-bottom: 3px solid transparent;
+}
+.guides-btn svg { transition: transform .15s ease; }
+.guides-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+.guides-btn.is-current, .guides-btn:hover { border-bottom-color: var(--noche); }
+.guides-panel { display: block; }
+.guides-all { display: block; font-weight: 700; color: var(--ladrillo); text-decoration: none; padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1px solid rgba(0, 48, 73, .2); }
+.guides-all:hover, .guides-all[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+.guides-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px 24px; }
+.guides-group-title { margin: 0 0 6px; font-size: .875rem; font-weight: 700; color: var(--text-soft); }
+.site-header .guides-panel ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.site-header .guides-panel li + li { border-top: 0; }
+.site-header .guides-panel a:not(.guides-all) { display: block; padding: 6px 0; border: 0; font-weight: 500; font-size: .96875rem; text-decoration: none; }
+.site-header .guides-panel a:not(.guides-all):hover, .site-header .guides-panel a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+
+@media (min-width: 700px) {
+  .site-header .header-row { flex-wrap: wrap; justify-content: space-between; align-items: center; column-gap: 28px; row-gap: 0; padding-top: 0; min-height: 72px; position: static; }
+  .site-header .menu { flex-basis: auto; display: flex; align-items: center; gap: 22px; position: relative; margin-left: auto; }
+  .site-header .menu-extra { position: static; display: flex; flex-direction: row; gap: 22px; margin: 0; padding: 0; border: 0; }
+  .site-header .menu-extra li + li { border-top: 0; }
+  .site-header .menu-extra a { font: 600 1rem var(--font-body); color: var(--noche); padding: 10px 0; text-transform: none; letter-spacing: 0; }
+  .site-header .menu-extra a::before, .site-header .menu-extra a::after { content: none; }
+  .js .guides-panel {
+    display: none; position: absolute; top: calc(100% + 8px); right: 0; z-index: 50; width: min(700px, calc(100vw - 2 * var(--gutter)));
+    background: var(--blanco); border: 2px solid var(--noche); border-radius: var(--radius); padding: 20px 24px 22px;
+    box-shadow: 0 14px 30px rgba(0, 48, 73, .18);
+  }
+  .js .guides-panel.open { display: block; }
+}
+@media (min-width: 700px) and (max-width: 900px) {
+  .site-header .menu, .site-header .menu-extra { gap: 16px; }
+  .site-header .menu-extra a, .guides-btn { font-size: .9375rem; }
+  .guides-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 699px) {
+  .guides-btn { display: none; }
+  .js .guides-panel { display: block; padding-top: 4px; }
+  .guides-cols { grid-template-columns: 1fr; gap: 14px; }
+  .guides-group-title { margin-top: 4px; }
+}

@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=20261111k">
+<link rel="stylesheet" href="css/styles.css?v=20261111l">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 30V12l6-6 6 6 6-6 6 6v18z' fill='%23669BBC' stroke='%23003049' stroke-width='2'/%3E%3Crect x='13' y='21' width='6' height='9' fill='%23C1121F'/%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
 <script data-goatcounter="https://estudiarenholanda.goatcounter.com/count" async src="assets/count.js"></script>
@@ -35,19 +35,44 @@
     <a class="brand" href="index.html" aria-label="Estudiar en Holanda: inicio">Estudiar en Holanda</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
     <nav id="menu" class="menu" aria-label="Páginas">
-      <ul class="menu-main">
-        <li><a href="todo-lo-que-necesitas.html" class="menu-highlight">Todo lo que necesitas</a></li>
-        <li><a href="llegada.html">Llegada</a></li>
-        <li><a href="alojamiento.html">Alojamiento</a></li>
-        <li><a href="ciudades.html">Ciudades</a></li>
-        <li><a href="presupuesto.html">Presupuesto</a></li>
-        <li><a href="beca-duo.html">Beca DUO</a></li>
-        <li><a href="trabajo.html">Trabajo</a></li>
-        <li><a href="holandes.html">Holandés</a></li>
-        <li><a href="bici-y-tren.html" aria-current="page">Bici y tren</a></li>
-        <li><a href="seguro.html">Seguro</a></li>
-        <li><a href="comunidad.html">Comunidad</a></li>
-      </ul>
+      <div class="guides">
+        <button class="guides-btn is-current" type="button" aria-expanded="false" aria-controls="guides-panel">Guía<svg aria-hidden="true" viewBox="0 0 12 8" width="12" height="8"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        <div id="guides-panel" class="guides-panel">
+          <a class="guides-all" href="todo-lo-que-necesitas.html">Todo lo que necesitas</a>
+          <div class="guides-cols">
+          <div class="guides-group">
+            <p class="guides-group-title">Antes de ir</p>
+            <ul>
+              <li><a href="ciudades.html">Universidades y ciudades</a></li>
+              <li><a href="alojamiento.html">Encontrar habitación</a></li>
+            </ul>
+          </div>
+          <div class="guides-group">
+            <p class="guides-group-title">Al llegar</p>
+            <ul>
+              <li><a href="llegada.html">Tu llegada, paso a paso</a></li>
+              <li><a href="seguro.html">Seguro médico</a></li>
+              <li><a href="bici-y-tren.html" aria-current="page">Bici y tren</a></li>
+              <li><a href="holandes.html">Clases de holandés</a></li>
+            </ul>
+          </div>
+          <div class="guides-group">
+            <p class="guides-group-title">Dinero y trabajo</p>
+            <ul>
+              <li><a href="presupuesto.html">Tu presupuesto al mes</a></li>
+              <li><a href="beca-duo.html">La beca DUO</a></li>
+              <li><a href="trabajo.html">Trabajar mientras estudias</a></li>
+            </ul>
+          </div>
+          <div class="guides-group">
+            <p class="guides-group-title">Y además</p>
+            <ul>
+              <li><a href="comunidad.html">Comunidad</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
       <ul class="menu-extra">
         <li><a href="calendario.html">Calendario</a></li>
         <li><a href="inscripcion.html">Inscripción</a></li>
@@ -157,6 +182,6 @@
 
 </main>
 
-<script src="js/main.js?v=20261111k"></script>
+<script src="js/main.js?v=20261111l"></script>
 </body>
 </html>
