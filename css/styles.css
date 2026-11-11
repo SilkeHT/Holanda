@@ -856,3 +856,13 @@ main [id] { scroll-margin-top: 16px; }
 .letter-from { margin: 0 0 6px; font-size: .9375rem; color: var(--text-soft); padding-bottom: 10px; border-bottom: 1px dashed rgba(0, 48, 73, .35); }
 .letter-from strong { color: var(--ladrillo); }
 .letter-card h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); margin: 10px 0 10px; }
+
+/* ---------- Home hero: houses visible without scrolling ---------- */
+.hero { padding-top: clamp(24px, 3.5vw, 44px); }
+.hero-text { gap: 18px; }
+.hero h1 { font-size: clamp(2.6rem, 5.4vw, 5rem); max-width: none; line-height: .98; }
+.hero .lead { max-width: 70ch; }
+.canal-wrap { margin-top: clamp(20px, 3vw, 32px); }
+.canal-wrap .canal { max-width: min(1200px, 100%); }
+.hero-below { display: grid; gap: 22px; margin-top: 20px; }
+@media (max-width: 720px) { .canal-wrap .canal { width: 820px; max-width: none; } }
