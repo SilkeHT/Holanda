@@ -835,3 +835,24 @@ main [id] { scroll-margin-top: 16px; }
 .hbo-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 6px 24px; }
 .guides-btn { color: var(--ladrillo); font-weight: 700; }
 .guides-btn.is-current, .guides-btn:hover, .guides-btn[aria-expanded="true"] { border-bottom-color: var(--ladrillo); }
+
+/* ---------- DUO check ---------- */
+.duo-check { margin-top: clamp(36px, 5vw, 56px); background: var(--blanco); border: 2px solid var(--noche); border-radius: var(--radius); padding: 26px 28px; }
+.duo-check h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin-bottom: 8px; }
+.duo-fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 18px 24px; margin: 18px 0 16px; }
+.duo-fields .field { min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.duo-result:empty { display: none; }
+.duo-result { border-left: 6px solid var(--acero); background: var(--papel); padding: 14px 18px; margin-bottom: 14px; }
+.duo-result.is-yes { border-left-color: #2E7D4F; }
+.duo-result.is-maybe { border-left-color: var(--acero); }
+.duo-result.is-no { border-left-color: var(--ladrillo); }
+.duo-title { margin: 0 0 4px; font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; line-height: 1.1; }
+.duo-text { margin: 0; }
+
+/* ---------- Cartas ---------- */
+.letter-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 860px) { .letter-list { grid-template-columns: 1fr; } }
+.letter-card { background: var(--blanco); border: 2px solid var(--noche); border-radius: var(--radius); padding: 22px 24px; }
+.letter-from { margin: 0 0 6px; font-size: .9375rem; color: var(--text-soft); padding-bottom: 10px; border-bottom: 1px dashed rgba(0, 48, 73, .35); }
+.letter-from strong { color: var(--ladrillo); }
+.letter-card h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); margin: 10px 0 10px; }

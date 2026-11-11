@@ -232,3 +232,36 @@
     if (e.key === 'Escape') { input.value = ''; render(''); }
   });
 })();
+
+// DUO check: work requirement for EU students (DUO 2026): 32 h/month, or under 21 at least ~173 €/month gross.
+(function () {
+  var form = document.getElementById('duo-check');
+  if (!form) return;
+  var out = document.getElementById('duo-result');
+  var MIN_INCOME_UNDER_21 = 173;
+  function num(id) { var v = parseFloat(String(document.getElementById(id).value).replace(',', '.')); return isFinite(v) ? v : null; }
+  function show(kind, title, text) {
+    out.className = 'duo-result is-' + kind;
+    out.innerHTML = '<p class="duo-title"></p><p class="duo-text"></p>';
+    out.querySelector('.duo-title').textContent = title;
+    out.querySelector('.duo-text').textContent = text;
+  }
+  function update() {
+    var works = form.querySelector('input[name="duo-trabajo"]:checked').value === 'si';
+    form.querySelectorAll('.duo-work').forEach(function (el) { el.hidden = !works; });
+    var age = num('duo-edad'), hours = num('duo-horas'), pay = num('duo-sueldo');
+    if (age === null) { out.className = 'duo-result'; out.innerHTML = ''; return; }
+    if (age >= 30) return show('no', 'No te corresponde', 'Para recibir la beca DUO tienes que empezar la carrera antes de cumplir 30 años.');
+    if (!works) return show('no', 'Sin trabajo, no hay beca completa', 'Si solo estudias, puedes pedir el préstamo de DUO para pagar la matrícula, pero no la beca. Para la beca completa necesitas trabajar en Holanda.');
+    if (hours === null && pay === null) { out.className = 'duo-result'; out.innerHTML = ''; return; }
+    if (hours !== null && hours >= 32) return show('yes', 'Cumples el requisito de horas', 'Trabajas 32 horas al mes o más, que es lo que pide DUO. Guarda tus nóminas: DUO puede comprobarlo.');
+    if (age < 21 && pay !== null && pay >= MIN_INCOME_UNDER_21) return show('yes', 'Cumples el requisito por sueldo', 'Con menos de 21 años basta con ganar unos 173 € brutos al mes, y tú ganas eso o más. Guarda tus nóminas: DUO puede comprobarlo.');
+    if (hours !== null && hours >= 24) return show('maybe', 'DUO decide caso por caso', 'Entre 24 y 32 horas al mes, DUO valora cada caso. Cuenta a tu favor llevar al menos 6 meses trabajando todos los meses con un horario estable.');
+    var extra = age < 21 ? ' Con menos de 21 años también te vale ganar unos 173 € brutos al mes.' : '';
+    show('no', 'Todavía no llegas', 'Necesitas trabajar de media 32 horas al mes.' + extra + ' Por debajo de 24 horas, normalmente no hay beca.');
+  }
+  form.addEventListener('input', update);
+  form.addEventListener('change', update);
+  form.addEventListener('submit', function (e) { e.preventDefault(); });
+  update();
+})();

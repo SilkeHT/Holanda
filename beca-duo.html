@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=20261111o">
+<link rel="stylesheet" href="css/styles.css?v=20261111p">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 30V12l6-6 6 6 6-6 6 6v18z' fill='%23669BBC' stroke='%23003049' stroke-width='2'/%3E%3Crect x='13' y='21' width='6' height='9' fill='%23C1121F'/%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
 <script data-goatcounter="https://estudiarenholanda.goatcounter.com/count" async src="assets/count.js"></script>
@@ -52,6 +52,7 @@
             <ul>
               <li><a href="llegada.html">Tu llegada, paso a paso</a></li>
               <li><a href="seguro.html">Seguro médico</a></li>
+              <li><a href="cartas.html">Cartas que te van a llegar</a></li>
               <li><a href="bici-y-tren.html">Bici y tren</a></li>
               <li><a href="holandes.html">Clases de holandés</a></li>
             </ul>
@@ -113,6 +114,34 @@
         <p class="note">Cuenta como trabajo suficiente hacer 32 horas al mes o ganar al menos la mitad de la norma de asistencia social. Si tienes menos de 21 años eso son solo unos 173 € al mes. La beca se convierte en donación si terminas la carrera en 10 años.</p>
       </article>
     </div>
+    <form class="duo-check" id="duo-check" novalidate aria-labelledby="duo-check-title">
+      <h2 id="duo-check-title">¿Te toca la beca DUO completa?</h2>
+      <p class="duo-intro">Responde a estas preguntas y te decimos, de forma orientativa, si cumples el requisito de trabajo que DUO pide a los estudiantes de la UE.</p>
+      <div class="duo-fields">
+        <div class="field">
+          <label for="duo-edad">Tu edad</label>
+          <div class="money"><input id="duo-edad" type="number" inputmode="numeric" min="15" max="99" step="1" placeholder="Ej.: 19"><span aria-hidden="true">años</span></div>
+        </div>
+        <div class="field">
+          <span class="label" id="duo-trabajo-label">¿Trabajas en Holanda?</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="duo-trabajo-label">
+            <label><input type="radio" name="duo-trabajo" value="no" checked> No</label>
+            <label><input type="radio" name="duo-trabajo" value="si"> Sí</label>
+          </div>
+        </div>
+        <div class="field duo-work">
+          <label for="duo-horas">Horas al mes, de media</label>
+          <div class="money"><input id="duo-horas" type="number" inputmode="numeric" min="0" step="1" placeholder="Ej.: 40"><span aria-hidden="true">h</span></div>
+        </div>
+        <div class="field duo-work">
+          <label for="duo-sueldo">Sueldo bruto al mes</label>
+          <div class="money"><input id="duo-sueldo" type="number" inputmode="decimal" min="0" step="1" placeholder="Ej.: 300"><span aria-hidden="true">€</span></div>
+        </div>
+      </div>
+      <div class="duo-result" id="duo-result" aria-live="polite"></div>
+      <p class="small-print">Es una orientación basada en las condiciones de DUO de 2026, no una respuesta oficial. DUO revisa cada caso y puede pedirte nóminas. Comprueba siempre las condiciones en <a href="https://duo.nl/particulier/student-finance-citizens-eu-eer-switzerland-or-uk/eligibility.jsp" target="_blank" rel="noopener">la web de DUO</a>.</p>
+    </form>
+
     <ol class="mini-steps">
       <li><span>Consigue tu BSN y tu DigiD.</span></li>
       <li><span>Firma un contrato con suficientes horas o sueldo (mira abajo).</span></li>
@@ -168,6 +197,6 @@
 
 </main>
 
-<script src="js/main.js?v=20261111o"></script>
+<script src="js/main.js?v=20261111p"></script>
 </body>
 </html>
