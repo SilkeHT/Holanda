@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=20261111i">
+<link rel="stylesheet" href="css/styles.css?v=20261111j">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 30V12l6-6 6 6 6-6 6 6v18z' fill='%23669BBC' stroke='%23003049' stroke-width='2'/%3E%3Crect x='13' y='21' width='6' height='9' fill='%23C1121F'/%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
 <script data-goatcounter="https://estudiarenholanda.goatcounter.com/count" async src="assets/count.js"></script>
@@ -66,25 +66,25 @@
       <p>Holanda es pequeña: en tren estás en casi cualquier ciudad en menos de tres horas. Elige por carrera, pero ten en cuenta el ambiente y el precio de la vivienda.</p>
     </div>
     <ul class="cities">
-      <li class="city"><h3>Amsterdam</h3><p class="uni"><a href="https://www.uva.nl" target="_blank" rel="noopener">Universiteit van Amsterdam</a> y <a href="https://vu.nl" target="_blank" rel="noopener">Vrije Universiteit</a></p><p>Muy internacional y con mucha vida cultural. La vivienda es la más cara y escasa del país.</p></li>
-      <li class="city"><h3>Utrecht</h3><p class="uni"><a href="https://www.uu.nl" target="_blank" rel="noopener">Universiteit Utrecht</a></p><p>En el centro del país, con el centro histórico y los canales a dos niveles. Muy ciclista y muy estudiantil.</p></li>
-      <li class="city"><h3>Leiden</h3><p class="uni"><a href="https://www.universiteitleiden.nl" target="_blank" rel="noopener">Universiteit Leiden</a></p><p>La universidad más antigua del país, en una ciudad pequeña y tranquila a 15 minutos de La Haya.</p></li>
-      <li class="city"><h3>Delft</h3><p class="uni"><a href="https://www.tudelft.nl" target="_blank" rel="noopener">TU Delft</a></p><p>Referencia en ingeniería y arquitectura. Ciudad pequeña con mucha vida de asociaciones.</p></li>
-      <li class="city"><h3>Rotterdam</h3><p class="uni"><a href="https://www.eur.nl" target="_blank" rel="noopener">Erasmus Universiteit</a></p><p>Arquitectura moderna, puerto y ambiente de gran ciudad. Fuerte en economía, empresa y medicina.</p></li>
-      <li class="city"><h3>Groningen</h3><p class="uni"><a href="https://www.rug.nl" target="_blank" rel="noopener">Rijksuniversiteit Groningen</a> y <a href="https://www.hanze.nl" target="_blank" rel="noopener">Hanze</a></p><p>En el norte, una de cada cuatro personas es estudiante. Más asequible y con mucha vida nocturna.</p></li>
-      <li class="city"><h3>Tilburg</h3><p class="uni"><a href="https://www.tilburguniversity.edu" target="_blank" rel="noopener">Tilburg University</a></p><p>En el sur, campus verde y ambiente cercano. Conocida por economía, derecho y ciencias sociales.</p></li>
-      <li class="city"><h3>Maastricht</h3><p class="uni"><a href="https://www.maastrichtuniversity.nl" target="_blank" rel="noopener">Maastricht University</a></p><p>Junto a Bélgica y Alemania, con clases en grupos pequeños y muchísimos estudiantes internacionales.</p></li>
-      <li class="city"><h3>Eindhoven</h3><p class="uni"><a href="https://www.tue.nl" target="_blank" rel="noopener">TU Eindhoven</a></p><p>El polo tecnológico del país: diseño, tecnología y empresas como ASML o Philips cerca.</p></li>
-      <li class="city"><h3>Nijmegen</h3><p class="uni"><a href="https://www.ru.nl" target="_blank" rel="noopener">Radboud Universiteit</a></p><p>La ciudad más antigua de Holanda, junto al río Waal, con un campus grande y verde.</p></li>
-      <li class="city"><h3>Wageningen</h3><p class="uni"><a href="https://www.wur.nl" target="_blank" rel="noopener">Wageningen University &amp; Research</a></p><p>Líder mundial en alimentación, agricultura y medio ambiente. Pueblo pequeño, comunidad muy unida.</p></li>
-      <li class="city"><h3>Enschede</h3><p class="uni"><a href="https://www.utwente.nl" target="_blank" rel="noopener">Universiteit Twente</a></p><p>Campus propio con residencias y deporte. Tecnología y emprendimiento, y alquileres más bajos.</p></li>
+      <li class="city"><h3 id="amsterdam">Amsterdam</h3><p class="uni"><a href="https://www.uva.nl" target="_blank" rel="noopener">Universiteit van Amsterdam</a> y <a href="https://vu.nl" target="_blank" rel="noopener">Vrije Universiteit</a></p><p>Muy internacional y con mucha vida cultural. La vivienda es la más cara y escasa del país.</p></li>
+      <li class="city"><h3 id="utrecht">Utrecht</h3><p class="uni"><a href="https://www.uu.nl" target="_blank" rel="noopener">Universiteit Utrecht</a></p><p>En el centro del país, con el centro histórico y los canales a dos niveles. Muy ciclista y muy estudiantil.</p></li>
+      <li class="city"><h3 id="leiden">Leiden</h3><p class="uni"><a href="https://www.universiteitleiden.nl" target="_blank" rel="noopener">Universiteit Leiden</a></p><p>La universidad más antigua del país, en una ciudad pequeña y tranquila a 15 minutos de La Haya.</p></li>
+      <li class="city"><h3 id="delft">Delft</h3><p class="uni"><a href="https://www.tudelft.nl" target="_blank" rel="noopener">TU Delft</a></p><p>Referencia en ingeniería y arquitectura. Ciudad pequeña con mucha vida de asociaciones.</p></li>
+      <li class="city"><h3 id="rotterdam">Rotterdam</h3><p class="uni"><a href="https://www.eur.nl" target="_blank" rel="noopener">Erasmus Universiteit</a></p><p>Arquitectura moderna, puerto y ambiente de gran ciudad. Fuerte en economía, empresa y medicina.</p></li>
+      <li class="city"><h3 id="groningen">Groningen</h3><p class="uni"><a href="https://www.rug.nl" target="_blank" rel="noopener">Rijksuniversiteit Groningen</a> y <a href="https://www.hanze.nl" target="_blank" rel="noopener">Hanze</a></p><p>En el norte, una de cada cuatro personas es estudiante. Más asequible y con mucha vida nocturna.</p></li>
+      <li class="city"><h3 id="tilburg">Tilburg</h3><p class="uni"><a href="https://www.tilburguniversity.edu" target="_blank" rel="noopener">Tilburg University</a></p><p>En el sur, campus verde y ambiente cercano. Conocida por economía, derecho y ciencias sociales.</p></li>
+      <li class="city"><h3 id="maastricht">Maastricht</h3><p class="uni"><a href="https://www.maastrichtuniversity.nl" target="_blank" rel="noopener">Maastricht University</a></p><p>Junto a Bélgica y Alemania, con clases en grupos pequeños y muchísimos estudiantes internacionales.</p></li>
+      <li class="city"><h3 id="eindhoven">Eindhoven</h3><p class="uni"><a href="https://www.tue.nl" target="_blank" rel="noopener">TU Eindhoven</a></p><p>El polo tecnológico del país: diseño, tecnología y empresas como ASML o Philips cerca.</p></li>
+      <li class="city"><h3 id="nijmegen">Nijmegen</h3><p class="uni"><a href="https://www.ru.nl" target="_blank" rel="noopener">Radboud Universiteit</a></p><p>La ciudad más antigua de Holanda, junto al río Waal, con un campus grande y verde.</p></li>
+      <li class="city"><h3 id="wageningen">Wageningen</h3><p class="uni"><a href="https://www.wur.nl" target="_blank" rel="noopener">Wageningen University &amp; Research</a></p><p>Líder mundial en alimentación, agricultura y medio ambiente. Pueblo pequeño, comunidad muy unida.</p></li>
+      <li class="city"><h3 id="enschede">Enschede</h3><p class="uni"><a href="https://www.utwente.nl" target="_blank" rel="noopener">Universiteit Twente</a></p><p>Campus propio con residencias y deporte. Tecnología y emprendimiento, y alquileres más bajos.</p></li>
     </ul>
     <details class="more">
       <summary>Leer más: cómo elegir ciudad</summary>
       <div class="more-body">
         <div class="more-grid">
           <div>
-            <h4>Antes de decidir</h4>
+            <h4 id="antes-de-decidir">Antes de decidir</h4>
             <ul>
               <li>Mira la carrera concreta, no solo el nombre de la universidad: el número de horas de clase y el tipo de evaluación cambian mucho.</li>
               <li>Pregunta si la universidad ayuda con el alojamiento a estudiantes internacionales de primer año.</li>
@@ -92,7 +92,7 @@
             </ul>
           </div>
           <div>
-            <h4>Moverte por el país</h4>
+            <h4 id="moverte-por-el-pais">Moverte por el país</h4>
             <ul>
               <li>Con la beca DUO tienes el transporte público gratis o con descuento.</li>
               <li>Sin ella, la suscripción de NS <em>Dal Voordeel</em> te da descuento en tren fuera de las horas punta.</li>
@@ -115,6 +115,6 @@
 
 </main>
 
-<script src="js/main.js?v=20261111i"></script>
+<script src="js/main.js?v=20261111j"></script>
 </body>
 </html>

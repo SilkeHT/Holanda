@@ -15,3 +15,11 @@ El menú y el pie de página están repetidos en cada página: si cambias uno, c
 Para verla, abre `index.html` en el navegador. Se publica con GitHub Pages desde la rama `main` en https://estudiarenholanda.github.io/estudiarenholanda/ y cuenta las visitas con GoatCounter (https://estudiarenholanda.goatcounter.com).
 
 Las cifras (salario mínimo, beca DUO, seguro médico) están revisadas en noviembre de 2026; conviene actualizarlas cada año.
+
+## Búsqueda
+
+La página de inicio tiene un buscador que usa `assets/search-index.json`. Si cambias el texto de alguna página, vuelve a generar el índice con:
+
+    python3 tools/build_search_index.py
+
+El script también añade un `id` a los títulos nuevos para que los resultados lleven directamente a cada apartado.

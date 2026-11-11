@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=20261111i">
+<link rel="stylesheet" href="css/styles.css?v=20261111j">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 30V12l6-6 6 6 6-6 6 6v18z' fill='%23669BBC' stroke='%23003049' stroke-width='2'/%3E%3Crect x='13' y='21' width='6' height='9' fill='%23C1121F'/%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
 <script data-goatcounter="https://estudiarenholanda.goatcounter.com/count" async src="assets/count.js"></script>
@@ -63,6 +63,15 @@
   <div class="wrap hero-text">
     <h1 id="hero-title"><span class="inv-q">¿</span>Te vas a estudiar a Holanda? Aquí tienes el mapa.</h1>
     <p class="lead">Todo lo que un estudiante español necesita para empezar un grado o un máster en los Países Bajos: papeles, casa, beca, trabajo, idioma y seguro médico. Explicado en español y en orden.</p>
+    <div class="search" role="search">
+      <label for="buscar" class="search-label">Busca en la guía</label>
+      <div class="search-field">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <input id="buscar" type="search" autocomplete="off" placeholder="Por ejemplo: BSN, beca DUO, seguro, habitación…" aria-describedby="buscar-estado" aria-controls="buscar-resultados">
+      </div>
+      <p id="buscar-estado" class="search-status" aria-live="polite"></p>
+      <ul id="buscar-resultados" class="search-results"></ul>
+    </div>
     <div class="hero-actions">
       <a class="btn btn-primary" href="llegada.html">Empieza por la llegada</a>
       <a class="btn btn-ghost" href="preguntas.html">Ver preguntas frecuentes</a>
@@ -460,6 +469,6 @@
   <div class="wrap"><p class="disclaimer">Información orientativa revisada en noviembre de 2026. Las normas y las cifras cambian: comprueba siempre los datos en las fuentes oficiales antes de tomar decisiones.</p></div>
 </footer>
 
-<script src="js/main.js?v=20261111i"></script>
+<script src="js/main.js?v=20261111j"></script>
 </body>
 </html>

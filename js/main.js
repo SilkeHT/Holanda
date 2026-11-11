@@ -141,3 +141,73 @@
   });
   render();
 })();
+
+// Site search on the home page: loads assets/search-index.json and matches every word typed.
+(function () {
+  var input = document.getElementById('buscar');
+  if (!input) return;
+  var status = document.getElementById('buscar-estado');
+  var list = document.getElementById('buscar-resultados');
+  var index = null, loading = null, timer = null;
+
+  function norm(s) {
+    return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  function load() {
+    if (index || loading) return loading;
+    loading = fetch('assets/search-index.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        index = data.map(function (e) { e.nh = norm(e.h); e.nt = norm(e.t); e.np = norm(e.pt); return e; });
+      })
+      .catch(function () { status.textContent = 'No se ha podido cargar la búsqueda. Recarga la página e inténtalo de nuevo.'; });
+    return loading;
+  }
+  function snippet(text, words) {
+    var n = norm(text), pos = -1;
+    words.forEach(function (w) { var i = n.indexOf(w); if (i !== -1 && (pos === -1 || i < pos)) pos = i; });
+    var start = Math.max(0, pos - 60), end = Math.min(text.length, start + 180);
+    var out = (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+    return out;
+  }
+  function render(q) {
+    var words = norm(q).split(/\s+/).filter(function (w) { return w.length > 1; });
+    list.innerHTML = '';
+    if (!words.length) { status.textContent = ''; return; }
+    var hits = [];
+    index.forEach(function (e) {
+      var score = 0;
+      for (var i = 0; i < words.length; i++) {
+        var w = words[i], inH = e.nh.indexOf(w) !== -1, inT = e.nt.indexOf(w) !== -1, inP = e.np.indexOf(w) !== -1;
+        if (!inH && !inT && !inP) return;
+        score += (inH ? 5 : 0) + (inP ? 2 : 0) + (inT ? 1 : 0);
+      }
+      hits.push({ e: e, s: score });
+    });
+    hits.sort(function (a, b) { return b.s - a.s; });
+    var shown = hits.slice(0, 8);
+    status.textContent = hits.length
+      ? (hits.length === 1 ? '1 resultado' : hits.length + ' resultados') + (hits.length > 8 ? '. Se muestran los 8 primeros.' : '.')
+      : 'No hay resultados para «' + q.trim() + '». Prueba con otra palabra o envíanos tu duda desde Preguntas frecuentes.';
+    shown.forEach(function (h) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = h.e.p + (h.e.a ? '#' + h.e.a : '');
+      var page = document.createElement('span'); page.className = 'sr-page'; page.textContent = h.e.pt;
+      var title = document.createElement('strong'); title.textContent = h.e.h;
+      var text = document.createElement('span'); text.className = 'sr-text'; text.textContent = h.e.t ? snippet(h.e.t, words) : '';
+      a.appendChild(page); a.appendChild(title); if (h.e.t) a.appendChild(text);
+      li.appendChild(a); list.appendChild(li);
+    });
+  }
+  input.addEventListener('focus', load);
+  input.addEventListener('input', function () {
+    clearTimeout(timer);
+    var q = input.value;
+    timer = setTimeout(function () { load().then(function () { if (index) render(q); }); }, 120);
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { var first = list.querySelector('a'); if (first) { e.preventDefault(); first.click(); } }
+    if (e.key === 'Escape') { input.value = ''; render(''); }
+  });
+})();
