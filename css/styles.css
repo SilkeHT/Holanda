@@ -417,7 +417,7 @@ td:last-child, th:last-child { font-variant-numeric: tabular-nums; }
 
 /* ---------- Budget calculator ---------- */
 .budget { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
-@media (max-width: 900px) { .budget { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .budget { grid-template-columns: minmax(0, 1fr); } }
 .budget-inputs { display: grid; gap: 28px; min-width: 0; }
 .budget fieldset { border: 0; border-top: 3px solid var(--noche); margin: 0; padding: 18px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 18px 24px; min-width: 0; }
 .budget legend { font-family: var(--font-display); font-weight: 800; font-size: 1.75rem; padding: 0; float: left; width: 100%; grid-column: 1 / -1; }
@@ -743,3 +743,40 @@ h1 em, h2 em, h3 em, h4 em { padding-right: .12em; }
 .search-results .sr-text { font-size: .9375rem; color: var(--text-soft); }
 .hero-text .search { margin-top: 4px; }
 main [id] { scroll-margin-top: 16px; }
+
+/* ---------- Inscripción page ---------- */
+.ins-steps { list-style: none; margin: 0 0 clamp(36px, 5vw, 56px); padding: 0; counter-reset: ins; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 3px solid var(--noche); }
+.ins-steps li { counter-increment: ins; padding: 20px 22px 8px 0; }
+.ins-steps li + li { padding-left: 22px; border-left: 1px solid rgba(0, 48, 73, .25); }
+.ins-steps li::before { content: counter(ins); display: block; font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; line-height: 1; color: var(--ladrillo); margin-bottom: 10px; }
+.ins-steps h3 { font-size: 1.5rem; margin-bottom: 8px; }
+.ins-steps p { margin: 0; font-size: .96875rem; }
+@media (max-width: 900px) { .ins-steps { grid-template-columns: 1fr 1fr; } .ins-steps li:nth-child(3) { padding-left: 0; border-left: 0; } }
+@media (max-width: 560px) { .ins-steps { grid-template-columns: 1fr; } .ins-steps li + li { padding-left: 0; border-left: 0; border-top: 1px solid rgba(0, 48, 73, .25); } }
+.ins-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 28px; align-items: start; }
+@media (max-width: 860px) { .ins-grid { grid-template-columns: 1fr; } }
+.ins-box { background: var(--blanco); border: 2px solid var(--noche); border-radius: var(--radius); padding: 24px 26px; }
+.ins-box h2 { font-size: clamp(1.9rem, 3vw, 2.4rem); margin-bottom: 14px; }
+.deadlines { margin: 0 0 14px; display: grid; gap: 14px; }
+.deadlines > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 4px 16px; border-top: 1px solid rgba(0, 48, 73, .25); padding-top: 12px; }
+.deadlines dt { font-family: var(--font-display); font-weight: 800; font-size: 1.375rem; line-height: 1.1; color: var(--ladrillo); }
+.deadlines dd { margin: 0; }
+@media (max-width: 480px) { .deadlines > div { grid-template-columns: 1fr; } }
+
+/* ---------- More grown-up: flat, straight, quieter (Nov 2026) ---------- */
+.step, .step:nth-child(odd), .step:nth-child(even) { transform: none; box-shadow: none; border-width: 2px; }
+.step::before { -webkit-text-stroke: 0; color: var(--ladrillo); }
+.stamp { transform: none; }
+.warning, .fine-box, .ticket-feature, .budget-result, .postcard, .gp-box, .rent-aid, .ask-box, .search-field, .pager-link:hover { box-shadow: none; }
+.warning, .fine-box { border-width: 2px; }
+.postcard, .gp-box, .rent-aid, .ask-box { border-width: 2px; }
+.btn, .more > summary, .search-field, .menu-btn, .segmented, .budget-mini, .js .menu-btn { border-radius: var(--radius); }
+.btn { border-width: 2px; }
+.more > summary { border-width: 2px; }
+.postcard-message .signature { transform: none; }
+.decision-q { border-radius: var(--radius); }
+.budget fieldset { grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); }
+.budget .field { min-width: 0; }
+.budget legend { float: none; display: block; }
+.budget .field { grid-template-columns: minmax(0, 1fr); }
+.money input { width: 100%; }
