@@ -833,3 +833,5 @@ main [id] { scroll-margin-top: 16px; }
 .hbo table { max-width: none; }
 .hbo-list-title { font-weight: 700; margin-bottom: 8px; }
 .hbo-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 6px 24px; }
+.guides-btn { color: var(--ladrillo); font-weight: 700; }
+.guides-btn.is-current, .guides-btn:hover, .guides-btn[aria-expanded="true"] { border-bottom-color: var(--ladrillo); }
