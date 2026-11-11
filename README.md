@@ -1,6 +1,6 @@
 # Holanda
 
-Web universidad holanda: **Estudiar en Holanda**, una guía en español para estudiantes que van a estudiar a una universidad de los Países Bajos.
+Web universidad holanda: **Estudiar en Holanda**, una guía en español para estudiantes que van a estudiar a una universidad de Holanda.
 
 Es una web estática (HTML, CSS y un poco de JavaScript), sin dependencias ni proceso de compilación.
 
